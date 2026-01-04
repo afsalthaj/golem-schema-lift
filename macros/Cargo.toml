@@ -10,7 +10,7 @@ proc-macro = true
 
 [dependencies]
 golem-rust = {workspace = true}
-proc-macro-crate = "3.4.0"
-proc-macro2 = "1"
-quote = "1"
-syn = {version = "2", features = ["extra-traits", "full", "fold", "parsing"]}
+proc-macro-crate = {workspace = true}
+proc-macro2 = {workspace = true}
+quote = {workspace = true}
+syn = {workspace = true}

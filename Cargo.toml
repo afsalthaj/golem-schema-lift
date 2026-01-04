@@ -7,3 +7,7 @@ golem-rust = { version = "1.10.4", features = [
     "export_golem_agentic",
     "golem_ai"
 ] }
+proc-macro-crate = "3.4.0"
+proc-macro2 = "1"
+quote = "1"
+syn = {version = "2", features = ["extra-traits", "full", "fold", "parsing"]}
