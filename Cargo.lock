@@ -104,12 +104,7 @@ dependencies = [
 name = "core"
 version = "0.1.0"
 dependencies = [
- "golem-rust",
  "macros",
- "proc-macro-crate",
- "proc-macro2",
- "quote",
- "syn",
 ]
 
 [[package]]

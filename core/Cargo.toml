@@ -6,13 +6,9 @@ edition = "2024"
 [lib]
 path = "src/lib.rs"
 
-proc-macro = true
-
 [dependencies]
 macros = {path = "../macros"}
 
-golem-rust = {workspace = true}
-proc-macro-crate = {workspace = true}
-proc-macro2 = {workspace = true}
-quote = {workspace = true}
-syn = {workspace = true}
+[[test]]
+name = "agent"
+path = "tests/agent.rs"
