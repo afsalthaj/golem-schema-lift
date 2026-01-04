@@ -1,4 +1,4 @@
-## Golem Schema Lift
+# Golem Schema Lift
 
 **golem-schema-lift** is an escape-hatch crate for the Golem Rust SDK's schema (`golem_rust::Schema`) derivation.
 
@@ -25,7 +25,8 @@ It might look like easy inductive derivation, but it has some caveats to be disc
 You might also think it is just an internal detail and doesn't leak to outside world, but sometimes it does. 
 However, not always this is a problem. Not always everyone cares too.
 
-### Example
+## Example
+
 The following fails to compile with just `golem_rust`, due to the recursive nature of `Expr`:
 ```rust 
 
