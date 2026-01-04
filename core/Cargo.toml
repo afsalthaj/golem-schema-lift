@@ -1,5 +1,5 @@
 [package]
-name = "core"
+name = "golem-schema-lift"
 version = "0.1.0"
 edition = "2024"
 
@@ -8,6 +8,7 @@ path = "src/lib.rs"
 
 [dependencies]
 macros = {path = "../macros"}
+golem-rust = {workspace = true}
 
 [[test]]
 name = "agent"

@@ -7,7 +7,7 @@ pub fn derive_non_recursive(input: &DeriveInput) -> TokenStream {
     let non_rec_name = format_ident!("{}NonRecursive", name);
     let arena_name = format_ident!("{}Arena", name);
 
-    let trait_path = quote!(golem_rust::agentic::ArenaMember);
+    let trait_path = quote!(golem_schema_lift::ArenaMember);
 
     let fields = match &input.data {
         Data::Struct(s) => match &s.fields {
@@ -21,7 +21,7 @@ pub fn derive_non_recursive(input: &DeriveInput) -> TokenStream {
     let field_types: Vec<_> = fields.named.iter().map(|f| &f.ty).collect();
 
     let expanded = quote! {
-        #[derive(Debug, Default, Clone)]
+        #[derive(Debug, Default, Clone, golem_rust::Schema)]
         pub struct #arena_name {
             pub nodes: Vec<#non_rec_name>
         }
